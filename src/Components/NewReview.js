@@ -1,5 +1,11 @@
+import React from "react"
 import {useState, useEffect} from "react"
 import{useNavigate} from "react-router-dom"
+import { Card,CardBody,CardSubtitle,CardImg,CardTitle, Button, CardText} from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../CSS/Card.css'
+
+
 
 function NewReview(){
     const INITIAL_STATE = {
@@ -14,7 +20,7 @@ function NewReview(){
 
     useEffect(() => {
         async function fetchData() {
-            const url = `${process.env.REACT_APP_BACKEND_URL}/review/all`
+            const url = `${process.env.REACT_APP_BACKEND_URL}/reviews/all`
             const response = await fetch(url)
             const data = await response.json()
             console.log(data)
@@ -39,7 +45,7 @@ function NewReview(){
             //creating our animal to connect to db
             newReview.age = Number(newReview.age)
 
-            const url = `${process.env.REACT_APP_BACKEND_URL}/review`
+            const url = `${process.env.REACT_APP_BACKEND_URL}/reviews`
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -57,22 +63,27 @@ function NewReview(){
    
 
     return(
-        <div>
+        <div className="container text-center" >
             <h3>Give us a Review</h3>
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} value={reviews.rating} name="rating" placeholder="rating" type="number" min={0} max={5}/>
-                <input onChange={handleChange} value={reviews.comment} name="comment" placeholder="comment" type="textArea"/>
-                <input type="submit" />
+            <form onSubmit={handleSubmit}  >
+            <input className="form-2" onChange={handleChange} value={reviews.name} name="name" placeholder="name" />
+                <input className="form-1" onChange={handleChange} value={reviews.rating} name="rating" placeholder="rating" type="number" min={0} max={5}/>
+                <input className="form-2" onChange={handleChange} value={reviews.comment} name="comment" placeholder="comment" type="textArea"/>
+           
+                <input className="form-1" Button="warning" type="submit" />
                 
             </form>
-            <div>
+            <div className="container text-center">
                 {/* index was added cause for some reason it removed the id error on the console log  */}
                 <h3>Reviews</h3>
                 {reviews.map((review, index) => (
-                    <div key={index}>
-                        <h4>Name: </h4>
-                        <h4>Rating: {review.rating}</h4>
-                        <p>Comment: {review.comment}</p>
+                    <div key={index} className="card-div" >
+                        <Card className="custom-card" >
+                          <CardTitle> <h4 className="card-headers">Name:</h4> <h5>{review.name} </h5></CardTitle> 
+                            <CardText><h4 className="card-headers">Rating: </h4> <p className="card-text-size">{review.rating}</p></CardText>
+                             <h4 className="card-headers">Comment:</h4 > <p>{review.comment}</p>
+                        </Card>
+
                     </div>
                 ))}
             </div>
