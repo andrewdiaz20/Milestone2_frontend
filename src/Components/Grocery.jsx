@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import "./Grocery.css";
+import { useNavigate } from "react-router-dom";
 
 function Grocery() {
     const[searchTerm, setSearchTerm] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevents the default form submit action
+
           useEffect(() => {
             async function fetchData() {
                 const url = `${process.env.REACT_APP_BACKEND_URL}/foods/all`
@@ -16,38 +16,37 @@ function Grocery() {
                 setSearchTerm(data)
             }
             fetchData()
-           },[])//notes: setAnimal(e.target.value) which seems to be the go to with handleChange will not work in this situation becuase it will override our inital state and whats in the form
-           const handleChange = (e) => {
-                   
-            setSearchTerm({
-                       ...searchTerm,
-                       //this targets the name in our input, it does this because we are calling this function "handleChange" on linke 44 in our input. 
-                       //This targets our name in our inputs and [updates the correct values]
-                       [e.target.name]: e.target.value
-                   })
-           }
-       
-               const handleSubmit = async (e) => {
-                   e.preventDefault()
-                   //creating our animal to connect to db
-                   searchTerm.age = Number(searchTerm.age)
-       
-                   const url = `${process.env.REACT_APP_BACKEND_URL}/review`
-                   const response = await fetch(url, {
-                       method: 'POST',
-                       headers: {
-                           'content-type': 'application/json'
-                       },
-                       body:JSON.stringify(searchTerm)
-                   })
-                   if(response.status !== 201) console.log('ERROR:') // add error handling
-                   // navigate('/food/review') was replaced due to not refreshing the page when creating a new review. 
-                   // reloads our page on submit : answer: https://stackoverflow.com/questions/18920651/how-can-i-refresh-a-form-page-after-the-form-submits-to-blank
-                   window.location.reload('/food/reivew')
-       
+           },[])
+           
+           //notes: setAnimal(e.target.value) which seems to be the go to with handleChange will not work in this situation becuase it will override our inital state and whats in the form
+    const handleChange = (e) => {
+        setSearchTerm({
+            ...searchTerm,
+            //this targets the name in our input, it does this because we are calling this function "handleChange" on linke 44 in our input. 
+            //This targets our name in our inputs and [updates the correct values]
+            [e.target.name]: e.target.value
+        })
+}
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        //creating our animal to connect to db
+
+        const url = `${process.env.REACT_APP_BACKEND_URL}/searchfoods/:name`
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+        if(response.status !== 201) console.log('ERROR:') // add error handling
+        // navigate('/food/review') was replaced due to not refreshing the page when creating a new review. 
+        // reloads our page on submit : answer: https://stackoverflow.com/questions/18920651/how-can-i-refresh-a-form-page-after-the-form-submits-to-blank
+        window.location.reload('/food/reivew')
 
     }
-      };
+           
+   
 
     return(
         <div className= "form">
@@ -65,8 +64,7 @@ function Grocery() {
     
     )
 
+}
 
-    }
 
 export default Grocery;
-
