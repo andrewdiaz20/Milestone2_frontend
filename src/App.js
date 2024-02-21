@@ -7,6 +7,7 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import Cart from './Components/Cart.js';
+import RandomFood from './Components/RandomFood.js';
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
             <Route path = '/Login' element={<Login/>}/>
+            <Route path = '/food/random' element={<RandomFood/>}/>
           </Routes>
          </Router>
     </div>
