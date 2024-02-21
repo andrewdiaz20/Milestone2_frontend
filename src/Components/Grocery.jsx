@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./Grocery.css";
 import { useNavigate } from "react-router-dom";
 
+
 function Grocery() {
     const[searchTerm, setSearchTerm] = useState('')
 
@@ -67,9 +68,5 @@ function Grocery() {
 }
 
 
-<<<<<<< HEAD
-export default Grocery;
 
-=======
 export default Grocery;
->>>>>>> 6d07e216ce713f39f231c2deacf4b2e9e2644d41
