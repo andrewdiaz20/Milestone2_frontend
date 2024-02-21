@@ -5,7 +5,7 @@ import NewFood from './Components/NewFood';
 import Home from './Components/Home';
 import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
-import SignIn from './Components/SignIn';
+import Login from './Components/Login';
 //Home, New, FoodPage
 
 function App() {
@@ -19,11 +19,7 @@ function App() {
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
-<<<<<<< HEAD
             <Route path = '/Login' element={<Login/>}/>
-=======
-            {/* <Route path = '/SignIn' element={<SignIn/>}/> */}
->>>>>>> d8786d1b8602754007f8499adbbd1aaba41fd4f3
           </Routes>
          </Router>
     </div>

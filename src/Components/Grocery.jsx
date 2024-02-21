@@ -38,5 +38,5 @@ function Grocery() {
 }
 
 
-export default MyComponent;
+export default Grocery;
 

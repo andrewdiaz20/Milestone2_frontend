@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -17,39 +16,41 @@ function Login(props) {
         login({email, password})
     }
 
-    const login = ({email, password}) => {
-        console.log(JSON.stringify({
-            email,
-            password
-        }));
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`,{
-            method: 'Post',
-            
-            body: JSON.stringify({
-                email,
-                password
-            }),
+    const login = ({ email, password }) => {
+
+        console.log(JSON.stringify({ email, password }));
+    
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // Set to 'application/json'
+            },
+            body: JSON.stringify({ email, password }),
         })
         .then((resp) => {
             console.log(resp);
-
-            if(resp.status == 200){
-                alert('login')
+            if (!resp.ok) {
+                // If the response status code is not OK, throw an error to catch it later
+                throw new Error('Network response was not ok');
             }
-
-            return resp.json();
+            return resp.json(); // Parse JSON only if response is ok
         })
         .then((data) => {
-
-            if(data.error){
-                alert(data.error);
-            }
             console.log(data);
+            if (data.error) {
+                alert(data.error);
+            } else {
+                // Assuming setIsLoggedIn is defined elsewhere and accessible here
+                setIsLoggedIn(true);
+                alert('Login successful');
+            }
         })
         .catch((err) => {
-            console.log(err);
-        })
+            console.error(err);
+            alert('An error occurred during login'); // Provide user feedback
+        });
     }
+
 
 
 
