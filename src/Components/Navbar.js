@@ -1,13 +1,95 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+import { React, useState } from "react"
+import { Link } from "react-router-dom"
+import logo from '../image/Foddie Central.png'
+import  './Navbar.css';
+import { Dropdown, DropdownButton,ToggleButton } from "react-bootstrap";
+
+
+
 
 function Navbar() {
+    const [cartQuantity, setcartQuantity]=useState(0)
     return(
+        <nav>
+
+            {/* first  row of the navbar */}
+            <div className="firstRow">
+             <ul>
+              <li className="location"><h3>Find Store Loction</h3></li>
+              <li className="foodie"><h3>FOODIE CENTRAL </h3></li>
+              <li className="sales"><h3>SALES!!!</h3></li>
+             </ul>
+            </div>
+             {/* second row of the navbar  */}
+           
+            <div className="secondRow">
+                 {/* logo */}
+        <div className="logo">
+            <img src={logo} alt='logo'/>
+        </div>
+        <div></div>
+       {/* search */}
+        <div className="searchBar">
+        <span class="material-symbols-outlined">
+search
+</span>
+            <input type="text" placeholder="search for products" className="search"/>
+            <button className="btnSearch">SEARCH</button>
+
+        
+            
+        </div>
+      {/* home */}
+       <div className="home">
+        HOME
+        <Link to="/">
+        <span class="material-symbols-outlined">home</span>
+        </Link>
+        </div>
+      {/* grocery */}
+        <div className="grocery">
+    
+    
+ grocery
+       
+     
+        </div>
+     {/* login & sign up*/}
+     <div className="right">
+
+     <div className="loginSignup"> 
+    Login 
+    <Link to="/signin">  
+     <span class="material-symbols-outlined">person</span>
+     </Link>
+</div>
+        
+{/* shopping_cart_checkout */}
+<div className="cartNumber">
+  {<div className="cart">
+      <Link to='/cart'>
+       <span class="material-symbols-outlined">shopping_cart_checkout</span>
+       </Link>
+<span className="quantity">{ cartQuantity } </span>
+            </div> }
+        
+        </div>
+     </div>
+
+        </div>
+
+
         <div>
+
             <Link to='/'>Home</Link>
             |
             <Link to='/food/new'>New</Link>
         </div>
+
+
+        </nav>
+       
     )
 }
 
