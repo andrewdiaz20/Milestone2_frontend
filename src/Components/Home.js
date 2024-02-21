@@ -12,22 +12,26 @@ function Home() {
         const response = await fetch(url)
         const data  = await response.json()
         console.log(data)
+        console.log('yes')
         setFoods(data)
     }
     fetchData()
    },[])
 
+
    const display = foods.map(food => {
     return (
         <div key={foods.id}>
 
-            <Link to={`/food`}>{food.name}</Link>
+            <Link to={`/food/${food._id}`}>{food.name}</Link>
+          
         </div>
     )
    })
    return (
     <div>
         {display}
+        <Link to={`/food/review`}>Review </Link>
     </div>
    )
 }
