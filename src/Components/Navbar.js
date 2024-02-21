@@ -28,7 +28,12 @@ function Navbar() {
         <div className="logo">
             <img src={logo} alt='logo'/>
         </div>
-        <div></div>
+        <div>
+            <Link to ="/food/review">Leave Us A Review</Link>
+        </div>
+        <div>
+            <Link to="/food/random">Let us Pick a Food Item For You</Link>
+        </div>
        {/* search */}
         <div className="searchBar">
         <span class="material-symbols-outlined">
