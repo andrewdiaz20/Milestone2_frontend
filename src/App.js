@@ -8,29 +8,31 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 // import SignIn from './Components/SignIn';//
 import Cart from './Components/Cart.js';
+import Login from './Components/Login.js';
 import RandomFood from './Components/RandomFood.js';
+import footer from './Components/footer.js';
 
 
 
 //Home, New, FoodPage
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedin')=== 'true');
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn')=== 'true');
 
   const logout = () => {
     //Clear the user's session
-    localStorage.removeItem('loggedin');
+    localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
 
-  const login = () => {
+  const Login = () => {
     //Set the user's session
-    localStorage.setItem('loggedin', true);
+    localStorage.setItem('isLoggedIn', true);
     setIsLoggedIn(true);
   };
 
   useEffect(() => {
-    setIsLoggedIn(localStorage.getItem('loggedin') === 'true');
+    setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
   }, []);
 
   return (
@@ -47,10 +49,9 @@ function App() {
             {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
 
-
-            {/* <Route path = '/Login' element={<Login/>}/> */}
+            <Route path = '/Login' element={<Login/>}/>
             <Route path = '/food/random' element={<RandomFood/>}/>
-          </Routes>
+        </Routes>
          </Router>
     </div>
   );
