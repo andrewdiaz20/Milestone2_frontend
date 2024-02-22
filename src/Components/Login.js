@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 function Login({login}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [isNewAccount, setIsNewAccount] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isNewAccount, setIsNewAccount] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
@@ -41,10 +40,10 @@ function Login({login}) {
                 alert(data.error);
             } else {
                 // Assuming setIsLoggedIn is defined elsewhere and accessible here
-                setIsLoggedIn(true);
+                // setIsLoggedIn(true);
                 alert('Login successful');
-                localStorage.setItem('token', data.data);
-                localStorage.setItem('loggedin', true);
+                // localStorage.setItem('token', data.data);
+                // localStorage.setItem('loggedin', true);
 
                 //from app props
                 login();

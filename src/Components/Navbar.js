@@ -5,8 +5,6 @@ import  './Navbar.css';
 import { Dropdown, DropdownButton,ToggleButton } from "react-bootstrap";
 
 
-
-
 function Navbar({isLoggedIn, logout}) {
     const [cartQuantity, setcartQuantity]=useState(0)
     const navigate = useNavigate();
@@ -38,7 +36,14 @@ function Navbar({isLoggedIn, logout}) {
         <div className="logo">
             <img src={logo} alt='logo'/>
         </div>
-        <div></div>
+ food-page-food-img
+        <div>
+            <Link to ="/food/review">Leave Us A Review</Link>
+        </div>
+        <div>
+            <Link to="/food/random">Would you Eat This</Link>
+        </div>
+
        {/* search */}
         <div className="searchBar">
         <span class="material-symbols-outlined">
