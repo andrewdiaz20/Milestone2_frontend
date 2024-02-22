@@ -15,22 +15,22 @@ import Cart from './Components/Cart.js';
 //Home, New, FoodPage
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedin')=== 'true');
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn')=== 'true');
 
   const logout = () => {
     //Clear the user's session
-    localStorage.removeItem('loggedin');
+    localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
   };
 
   const login = () => {
     //Set the user's session
-    localStorage.setItem('loggedin', true);
+    localStorage.setItem('isLoggedIn', true);
     setIsLoggedIn(true);
   };
 
   useEffect(() => {
-    setIsLoggedIn(localStorage.getItem('loggedin') === 'true');
+    setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
   }, []);
 
   return (
