@@ -38,12 +38,14 @@ function Navbar({isLoggedIn, logout}) {
         <div className="logo">
             <img src={logo} alt='logo'/>
         </div>
+ food-page-food-img
         <div>
             <Link to ="/food/review">Leave Us A Review</Link>
         </div>
         <div>
-            <Link to="/food/random">Let us Pick a Food Item For You</Link>
+            <Link to="/food/random">Would you Eat This</Link>
         </div>
+
        {/* search */}
         <div className="searchBar">
         <span class="material-symbols-outlined">
@@ -108,7 +110,7 @@ search
         <div>
 
             <Link to='/'>Home</Link>
-            |
+            
             <Link to='/food/new'>New</Link>
         </div>
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import "./Grocery.css";
 import { useNavigate } from "react-router-dom";
+import GroceryItem from "./GroceryItem";
 
 
 function Grocery() {
@@ -65,4 +66,9 @@ function Grocery() {
     )
 }
 
+
+
+
 export default Grocery;
+
+
