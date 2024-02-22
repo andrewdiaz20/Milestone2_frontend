@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';  
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Food from './Components/Food';
@@ -15,15 +15,23 @@ import Cart from './Components/Cart.js';
 //Home, New, FoodPage
 
 function App() {
-  var [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedin'));
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedin')=== 'true');
 
   const logout = () => {
+    //Clear the user's session
+    localStorage.removeItem('loggedin');
     setIsLoggedIn(false);
-  }
+  };
 
   const login = () => {
+    //Set the user's session
+    localStorage.setItem('loggedin', true);
     setIsLoggedIn(true);
-  }
+  };
+
+  useEffect(() => {
+    setIsLoggedIn(localStorage.getItem('loggedin') === 'true');
+  }, []);
 
   return (
     <div>
@@ -35,10 +43,16 @@ function App() {
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
-            <Route path = '/login' element={isLoggedIn ? <Navigate to="/"/> : <Login login={login}/>}/>
-            <Route path = '/signup' element={isLoggedIn ? <Navigate to="/"/> : <SignUp/>}/>
+          <Route
+            path='/login'
+            element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}
+          />
+          <Route
+            path='/signup'
+            element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}
+          />
             <Route path ='/Cart'  element={<Cart/>}/>
-            <Route path = '/food/random' element={<RandomFood/>}/>
+            {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
         </Routes>
         <Footer/>
          </Router>
