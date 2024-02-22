@@ -6,8 +6,10 @@ import NewFood from './Components/NewFood';
 import Home from './Components/Home';
 import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
-// import SignIn from './Components/SignIn';//
+import SignUp from './Components/SignUp.js';
 import Cart from './Components/Cart.js';
+import  Login  from './Components/Login.js';
+import RandomFood from './Components/RandomFood.js';
 
 
 //Home, New, FoodPage
@@ -21,7 +23,7 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  const login = () => {
+  const Login = () => {
     //Set the user's session
     localStorage.setItem('loggedin', true);
     setIsLoggedIn(true);
@@ -42,7 +44,7 @@ function App() {
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
 
-            {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
+            <Route path = '/SignUp' element={<SignUp/>}/>
             <Route path ='/Cart'  element={<Cart/>}/>
 
 
