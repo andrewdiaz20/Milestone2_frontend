@@ -10,6 +10,7 @@ import Login from './Components/Login.js';
 import SignUp from './Components/SignUp.js';
 // import SignIn from './Components/SignIn';//
 import Cart from './Components/Cart.js';
+import Footer from './Components/footer.js';
 
 
 //Home, New, FoodPage
@@ -51,7 +52,8 @@ function App() {
             <Route path ='/Cart'  element={<Cart/>}/>
             {/* <Route path = '/Login' element={<Login/>}/> */}
             {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
-          </Routes>
+        </Routes>
+        <Footer />
          </Router>
     </div>
   );

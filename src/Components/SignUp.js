@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
+
 
 function SignUp(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    // const [isNewAccount, setIsNewAccount] = useState(false);
+
 
     const navigate = useNavigate();
 
@@ -17,8 +17,6 @@ function SignUp(props) {
     }
 
     const signup = () => {
-        console.log(JSON.stringify({ email, password }));
-
         fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/signup`, {
             method: 'POST',
             headers: {
@@ -34,7 +32,6 @@ function SignUp(props) {
             }),
         })
             .then((resp) => {
-                console.log(resp);
                 if (!resp.ok) {
                     // If the response status code is not OK, throw an error to catch it later
                     throw new Error('Network response was not ok');
@@ -42,7 +39,6 @@ function SignUp(props) {
                 return resp.json(); // Parse JSON only if response is ok
             })
             .then((data) => {
-                console.log(data);
                 if (data.error) {
                     alert(data.error);
                 } else {

@@ -5,8 +5,6 @@ import  './Navbar.css';
 import { Dropdown, DropdownButton,ToggleButton } from "react-bootstrap";
 
 
-
-
 function Navbar({isLoggedIn, logout}) {
     const [cartQuantity, setcartQuantity]=useState(0)
     const navigate = useNavigate();
