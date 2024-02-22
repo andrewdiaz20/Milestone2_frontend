@@ -1,0 +1,38 @@
+
+.custom-card {
+    width: 75rem;
+    padding: 1vh 2vw;
+    margin: 1rem;
+    background-color: #45ACEC ;
+    color: white;
+    text-align: center;
+ 
+  }
+
+
+
+ .card-headers {
+  color: pink;
+  background-color: ;
+  
+ }
+
+ .card-text-size{
+  font-size: 20px;
+ }
+ .form-1{
+  background-color: #45ACEC ;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin: 30px;
+  border-radius: 10%;
+ }
+
+ .form-2{
+   background-color: pink;
+   color: white;
+   width: 200px;
+   height: 40px;
+   border-radius: 10%;
+ }

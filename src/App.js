@@ -7,7 +7,6 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 //import SignIn from './Components/SignIn';//
 import Cart from './Components/Cart.js';
-import Login from './Components/Login.js'
 
 //Home, New, FoodPage
 
@@ -28,6 +27,7 @@ function App() {
 
 
             <Route path = '/Login' element={<Login/>}/>
+            <Route path = '/food/random' element={<RandomFood/>}/>
           </Routes>
          </Router>
     </div>
