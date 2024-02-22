@@ -52,10 +52,6 @@ function Grocery() {
             <input type="submit"/>
             <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Price"/>
             <input type="submit"/>
-            <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Description"/>
-            <input type="submit"/>
-            <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Rating"/>
-            <input type="submit"/>
         </form>
         </div>
     )
