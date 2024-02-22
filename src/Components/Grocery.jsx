@@ -62,15 +62,7 @@ function Grocery() {
             <input type="submit"/>
         </form>
         </div>
-    
     )
-
 }
 
-
-
 export default Grocery;
-
-=======
-export default Grocery;
->>>>>>> 6d07e216ce713f39f231c2deacf4b2e9e2644d41
