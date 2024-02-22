@@ -32,7 +32,7 @@ function Navbar() {
             <Link to ="/food/review">Leave Us A Review</Link>
         </div>
         <div>
-            <Link to="/food/random">Let us Pick a Food Item For You</Link>
+            <Link to="/food/random">Would you Eat This</Link>
         </div>
        {/* search */}
         <div className="searchBar">
