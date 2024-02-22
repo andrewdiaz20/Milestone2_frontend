@@ -8,6 +8,7 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
+import Footer from './Components/footer.js';
 import Cart from './Components/Cart.js';
 
 
