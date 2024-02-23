@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import "./Grocery.css";
 import { useNavigate } from "react-router-dom";
 import GroceryItem from "./GroceryItem";
+import { Link } from "react-router-dom";
+import { Foods } from "./Food.js"
 
 
 function Grocery() {
@@ -36,15 +38,19 @@ function Grocery() {
    
     const data = await response.json();
     console.log(data)
-
-        
     
-        
+    const display = searchTerm.map(food => {
+        return (
+            <div key={foods.id}>
+                <Link to={`/food/${food._id}`}>{food.name}</Link>
+                <Link to={`/login`}>Login</Link>
+            </div>
+        )
+       });
+       return{display}
+
 
     }
-           
-   
-
     return(
         <div className= "form">
         <form onSubmit={handleSubmit}>
@@ -61,4 +67,3 @@ function Grocery() {
 
 
 export default Grocery;
-
