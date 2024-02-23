@@ -8,8 +8,12 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
+
+import UpdateForm from './Components/UpdateForm.js';
+
 import Footer from './Components/footer.js';
 import Cart from './Components/Cart.js';
+
 
 
 
@@ -53,8 +57,13 @@ function App() {
             element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
           {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
-            {/* <Route path = '/Login' element={<Login/>}/> */}
-            {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
+
+            <Route path = '/login' element={<Login/>} />
+            <Route path = '/Signin' element={<SignUp/>}/>
+            <Route path = '/food/random' element={<RandomFood/>}/>
+            <Route path = '/food/description/:id' element={<UpdateForm/>} />
+
+
         </Routes>
          </Router>
     </div>
