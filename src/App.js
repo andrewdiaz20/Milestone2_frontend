@@ -8,8 +8,13 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login.js';
 import SignUp from './Components/SignUp.js';
+// import SignIn from './Components/SignIn';//
 import Cart from './Components/Cart.js';
-import Footer from './Components/footer.js';
+import Login from './Components/Login.js';
+import RandomFood from './Components/RandomFood.js';
+import footer from './Components/footer.js';
+import SignUp from './Components/SignUp.js';
+
 
 
 //Home, New, FoodPage
@@ -23,7 +28,7 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  const login = () => {
+  const Login = () => {
     //Set the user's session
     localStorage.setItem('isLoggedIn', true);
     setIsLoggedIn(true);
@@ -39,7 +44,7 @@ function App() {
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
           <Routes>
             <Route path ='/' element={<Home />}/>
-            <Route path ='/food' element={<Food />}/>
+            <Route path ={'foods/:id' }element={<Food />}/>
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
@@ -47,10 +52,11 @@ function App() {
             path='/login' element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}/>
             <Route path='/signup'
             element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
+          {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
+            {/* <Route path = '/Login' element={<Login/>}/> */}
             {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
         </Routes>
-        <Footer />
          </Router>
     </div>
   );

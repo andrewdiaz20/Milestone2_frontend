@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function GroceryItem(props){
     const [view,setView] = useState(false)
@@ -15,7 +15,7 @@ function GroceryItem(props){
         'height': '20vh',
         'border': '1px solid black',
         'margin': '2px',
-        'backgroundImage': 'url(${props.item.artworkUrl100})',
+        'backgroundimage': 'src\image\Foddie Central.png',
         'backgroundRepeat': 'no-repeat',
         'backgroundSize': 'cover',
         'color': 'yellow'

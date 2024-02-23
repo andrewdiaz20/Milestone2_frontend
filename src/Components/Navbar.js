@@ -62,13 +62,9 @@ search
         <span class="material-symbols-outlined">home</span>
         </Link>
         </div>
-      {/* grocery */}
+   
         <div className="grocery">
-    
-    
- grocery
-       
-     
+               <Link to="/grocery">Grocery</Link>
         </div>
      {/* login & sign up*/}
      <div className="right">
@@ -83,7 +79,7 @@ search
     :
     <div className="loginSignup"> 
         Login 
-        <Link to="/login">  
+        <Link to="/Signin">  
             <span class="material-symbols-outlined">person</span>
         </Link>
     </div>    

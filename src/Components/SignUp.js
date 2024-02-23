@@ -98,7 +98,7 @@ function SignUp(props) {
                         value='Create Account' />
                 </div>
                 <div className='inputContainer'>
-                Already have an account? <a href="#" onClick={(e) => { navigate('/login')}}>Login</a>
+                Already have an account? <a href="" onClick={(e) => { navigate('/login')}}>Login</a>
                 </div>
             </form>
         </div>
