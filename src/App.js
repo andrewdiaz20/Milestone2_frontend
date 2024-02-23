@@ -13,6 +13,7 @@ import UpdateForm from './Components/UpdateForm.js';
 
 import Footer from './Components/footer.js';
 import Cart from './Components/Cart.js';
+import RandomFood from './Components/RandomFood.js';
 
 
 
