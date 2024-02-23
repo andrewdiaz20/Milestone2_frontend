@@ -79,7 +79,7 @@ search
     :
     <div className="loginSignup"> 
         Login 
-        <Link to="/Signin">  
+        <Link to="/SignUp">  
             <span class="material-symbols-outlined">person</span>
         </Link>
     </div>    
