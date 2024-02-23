@@ -1,3 +1,21 @@
+.form2{
+    border-radius: 5px solid white;
+    margin: auto;
+    color: white;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: row;
+    background: #3ac9f8;
+    color: white;
+    background-color: #45CFFF;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100vh;
+    outline: white;
+    align-items: center;
+
+    
+}
 .form{
     border-radius: 5px solid white;
     margin: auto;

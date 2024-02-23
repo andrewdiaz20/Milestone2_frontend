@@ -57,8 +57,8 @@ function Grocery() {
         </div>
         <div>
             {searchResults.map(food => ( // Render the search results
-                    <div key={food._id}>
-                        <Link to={`/food/${food._id}`}>{food.name}</Link>
+                    <div className="form2"key={food._id}>
+                        <Link to={`/foods/${food._id}`}>{food.name}</Link>
                         {/* Other food details can be displayed here */}
                     </div>
                 ))}
