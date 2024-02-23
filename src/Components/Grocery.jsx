@@ -40,20 +40,20 @@ function Grocery() {
     console.log(data)
 
     
-    const display = searchTerm.map(food => {
+    const display = (Foods => {
         return (
-            <div key={foods.id}>
-                <Link to={`/food/${food._id}`}>{food.name}</Link>
+            <div key={Foods.id}>
+                <Link to={`/food/:id${Foods._id}`}>{Foods.name}</Link>
                 <Link to={`/login`}>Login</Link>
             </div>
         )
-       });
-       return{display}
+       });return{display}
 
     }
 
 
-    
+
+
     return(
         <div className= "form">
         <form onSubmit={handleSubmit}>
@@ -61,14 +61,10 @@ function Grocery() {
             <input type="submit"/>
             <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Price"/>
             <input type="submit"/>
-           
-            
         </form>
         </div>
     )
 }
-
-
 
 
 export default Grocery;

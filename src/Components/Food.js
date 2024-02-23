@@ -3,6 +3,8 @@ import { useParams, useNavigate, Link} from "react-router-dom"
 import { Card,CardBody,CardSubtitle,CardImg,CardTitle, Button, CardText} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/Card.css'
+import Grocery from "./Grocery.jsx";
+import GroceryItem from "./GroceryItem";
 
 
 
@@ -53,4 +55,4 @@ function Food() {
    
 }
 
-export default Food
+export default Food;
