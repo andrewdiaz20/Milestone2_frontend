@@ -8,11 +8,8 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
-import Footer from './Components/footer.js';
+import Footer from './Components/Footer.js';
 import Cart from './Components/Cart.js';
-
-
-
 
 
 //Home, New, FoodPage
@@ -38,7 +35,8 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='main-footer'>
+          <div className='content-wrap'>
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
           <Routes>
@@ -55,8 +53,11 @@ function App() {
             <Route path ='/Cart'  element={<Cart/>}/>
             {/* <Route path = '/Login' element={<Login/>}/> */}
             {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
-        </Routes>
-         </Router>
+          </Routes>
+        </Router>
+      </div>
+      
+        <Footer />
     </div>
   );
 }
