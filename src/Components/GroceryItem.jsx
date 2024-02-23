@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
+import Grocery from "./Grocery.jsx"
+import Food from "./Food.js"
 
-function GroceryItem(props){
+function GroceryItem(Foods){
     const [view,setView] = useState(false)
 
     const simpleStyle ={
@@ -24,8 +26,8 @@ function GroceryItem(props){
     const simpleView = () => {
         return(
             <div style={simpleStyle}>
-                <h3>{props.item.itemName}</h3>
-                <h4>{props.item.collectionName}</h4>
+                <h3>{Foods.item}</h3>
+                <h4>{Foods.item}</h4>
             </div>
         )
     }
@@ -33,8 +35,8 @@ function GroceryItem(props){
     const detailView = () => {
         return(
             <div style={detailStyle}>
-                <h2>{props.item.itemName}</h2>
-                <h3>{props.item.collectionName}</h3>
+                <h2>{Foods.item}</h2>
+                <h3>{Foods.item}</h3>
             </div>
         )
     }
