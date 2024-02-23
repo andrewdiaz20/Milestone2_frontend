@@ -6,8 +6,7 @@ function Login({login}) {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-    // const [isNewAccount, setIsNewAccount] = useState(false);
+    
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {

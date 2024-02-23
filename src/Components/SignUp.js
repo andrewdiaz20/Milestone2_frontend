@@ -72,7 +72,6 @@ function SignUp(props) {
                         placeholder="Last Name"
                         onChange={(ev) => setLastName(ev.target.value)}
                         className='inputBox' />
-                    {/* <label className='errorLabel'>{emailError}</label> */}
                 </div>
                 <div className={'inputContainer'}>
                     <input
@@ -80,7 +79,6 @@ function SignUp(props) {
                         placeholder="Enter your email here"
                         onChange={(ev) => setEmail(ev.target.value)}
                         className='inputBox' />
-                    {/* <label className='errorLabel'>{emailError}</label> */}
                 </div>
                 <br />
                 <div className='inputContainer'>

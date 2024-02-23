@@ -8,7 +8,6 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login.js';
 import SignUp from './Components/SignUp.js';
-// import SignIn from './Components/SignIn';//
 import Cart from './Components/Cart.js';
 import Footer from './Components/footer.js';
 
@@ -48,9 +47,7 @@ function App() {
             path='/login' element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}/>
             <Route path='/signup'
             element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
-          {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
-            {/* <Route path = '/Login' element={<Login/>}/> */}
             {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
         </Routes>
         <Footer />
