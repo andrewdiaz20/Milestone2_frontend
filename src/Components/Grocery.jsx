@@ -36,14 +36,15 @@ function Grocery() {
    
     const data = await response.json();
     console.log(data)
+    
 
-        
+
     
         
 
     }
            
-   
+
 
     return(
         <div className= "form">
@@ -52,6 +53,8 @@ function Grocery() {
             <input type="submit"/>
             <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Price"/>
             <input type="submit"/>
+           
+            
         </form>
         </div>
     )
