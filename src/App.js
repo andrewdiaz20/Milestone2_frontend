@@ -8,7 +8,7 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
-
+import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
 
 import Footer from './Components/footer.js';
