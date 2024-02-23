@@ -53,7 +53,7 @@ function Grocery() {
     }
 
 
-    }
+    
     return(
         <div className= "form">
         <form onSubmit={handleSubmit}>
