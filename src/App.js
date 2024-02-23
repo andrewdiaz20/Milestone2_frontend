@@ -49,8 +49,8 @@ function App() {
 
             {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
-
-            <Route path = '/Login' element={<SignUp/>}/>
+            <Route path = '/login' element={<Login/>} />
+            <Route path = '/Signin' element={<SignUp/>}/>
             <Route path = '/food/random' element={<RandomFood/>}/>
         </Routes>
          </Router>
