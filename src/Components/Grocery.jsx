@@ -38,6 +38,7 @@ function Grocery() {
    
     const data = await response.json();
     console.log(data)
+
     
     const display = searchTerm.map(food => {
         return (
@@ -49,6 +50,8 @@ function Grocery() {
        });
        return{display}
 
+    }
+
 
     }
     return(
@@ -58,6 +61,8 @@ function Grocery() {
             <input type="submit"/>
             <input onChange ={(e) => setSearchTerm(e.target.value)} placeholder="Search Price"/>
             <input type="submit"/>
+           
+            
         </form>
         </div>
     )

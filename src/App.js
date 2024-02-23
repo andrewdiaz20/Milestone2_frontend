@@ -41,7 +41,7 @@ function App() {
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
           <Routes>
             <Route path ='/' element={<Home />}/>
-            <Route path ='/food' element={<Food />}/>
+            <Route path ={'foods/:id' }element={<Food />}/>
             <Route path ='/food/new' element={<NewFood/>}/>
             <Route path ='/food/review' element={<NewReview/>} />
             <Route path = '/Grocery' element={<Grocery/>}/>
