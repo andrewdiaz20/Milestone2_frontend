@@ -6,7 +6,7 @@ import '../CSS/Card.css'
 
 
 
-function Food() {
+function UpdateForm() {
     const [foods, setFoods] = useState('')
     const {id} = useParams()
     const navigate = useNavigate()
@@ -50,4 +50,4 @@ function Food() {
    
 }
 
-export default Food
+export default UpdateForm

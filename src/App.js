@@ -12,6 +12,7 @@ import Login from './Components/Login.js';
 import RandomFood from './Components/RandomFood.js';
 import footer from './Components/footer.js';
 import SignUp from './Components/SignUp.js';
+import UpdateForm from './Components/UpdateForm.js';
 
 
 
@@ -52,6 +53,7 @@ function App() {
             <Route path = '/login' element={<Login/>} />
             <Route path = '/Signin' element={<SignUp/>}/>
             <Route path = '/food/random' element={<RandomFood/>}/>
+            <Route path = '/food/description/:id' element={<UpdateForm/>} />
         </Routes>
          </Router>
     </div>
