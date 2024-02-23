@@ -49,7 +49,7 @@ function RandomFood() {
     }
 
     async function UpdateLike() {
-        console.log(randomfood.name)
+        console.log(randomfood._id)
         console.log('yes')
     }
     
