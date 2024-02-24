@@ -1,0 +1,29 @@
+.main-footer {
+    color: white;
+    /* background-color: #dc3545; */
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .container {
+    position: fixed;
+    color: black;
+    border-bottom: 0cap;
+    width: auto;
+  }
+
+  .footer-nav-col h3 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0.09rem;
+  }
+
+  .footer-social-links {
+    width: 150px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+  }

@@ -1,11 +1,28 @@
-import { React, useState } from "react";
+import { React, useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
-import { Dropdown, DropdownButton, ToggleButton } from "react-bootstrap";
 
 function Navbar({ isLoggedIn, logout }) {
-  const [cartQuantity, setcartQuantity] = useState(0);
+  const [cartQuantity, setcartquantity] = useState(0);
+
+  const getcarttotalitems = () => {
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    if (cart) {
+        let total = 0
+        cart.forEach(item => {
+            total += item.quantity
+        })
+        setcartquantity(total)
+    }
+    else {
+        setcartquantity(0)
+    }
+}
+useEffect(() => {
+  getcarttotalitems()
+}, [reloadnavbar])
+
   const navigate = useNavigate();
 
   const logoutUser = () => {
@@ -13,6 +30,7 @@ function Navbar({ isLoggedIn, logout }) {
     localStorage.removeItem("loggedin");
 
     //from app props
+
     logout();
     navigate("/login");
   };
@@ -111,3 +129,5 @@ function Navbar({ isLoggedIn, logout }) {
 }
 
 export default Navbar;
+        
+

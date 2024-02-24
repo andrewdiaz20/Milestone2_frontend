@@ -8,10 +8,17 @@ import NewReview from './Components/NewReview';
 import Grocery from './Components/Grocery';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
-import Footer from './Components/footer.js';
+import Footer from './Components/Footer.js';
+import RandomFood from './Components/RandomFood.js';
+import UpdateForm from './Components/UpdateForm.js';
+
 import Cart from './Components/Cart.js';
+<<<<<<< HEAD
 import Banner from './Components/Banner.js';
 
+=======
+import RandomFood from './Components/RandomFood.js';
+>>>>>>> 2e351dd9f4be456307d311beedf9c934c3153984
 
 
 
@@ -38,7 +45,8 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='main-footer'>
+          <div className='content-wrap'>
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
         <Banner/>
@@ -52,12 +60,13 @@ function App() {
             path='/login' element={!isLoggedIn ? <Login login={login} /> : <Navigate to="/" />}/>
             <Route path='/signup'
             element={!isLoggedIn ? <SignUp /> : <Navigate to="/" />}/>  
-          {/*<Route path = '/SignIn' element={<SignIn/>}/>*/}
             <Route path ='/Cart'  element={<Cart/>}/>
-            {/* <Route path = '/Login' element={<Login/>}/> */}
-            {/* <Route path = '/food/random' element={<RandomFood/>}/> */}
-        </Routes>
-         </Router>
+           <Route path = '/food/random' element={<RandomFood/>}/>
+            <Route path = '/food/description/:id' element={<UpdateForm/>} />
+          </Routes>
+        </Router>
+      </div>
+        <Footer />
     </div>
   );
 }

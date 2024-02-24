@@ -32,7 +32,7 @@ function Home() {
     <div>
         <Banner/>
         {display}
-        <Link to={`/food/review`}>Review </Link>
+           <Link to={`/food/review`}>Review </Link>
     </div>
    )
 }
