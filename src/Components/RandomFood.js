@@ -67,6 +67,13 @@ function RandomFood() {
             window.location.reload();
         },1000)
     }
+
+    async function handleClick2(){
+        DeleteFood();
+        setTimeout(() => {
+            window.location.reload();
+        },1000)
+    }
     
     return (
         <div className="container text-center">
@@ -79,11 +86,12 @@ function RandomFood() {
                         <CardText><h4 className="card-headers">type: </h4> <p className="card-text-size">{randomfood.type}</p></CardText>
                         <CardText><h4 className="card-headers">price: </h4> <p className="card-text-size">{randomfood.price}</p></CardText>
                         <CardText><h4 className="card-headers">description: </h4> <p className="card-text-size">{randomfood.description}</p></CardText>
-                        <CardText><h4 className="card-headers">section: </h4> <p className="card-text-size">{randomfood.section}</p></CardText>
+                        <CardText><h4 className="card-headers">Likes: </h4> <p className="card-text-size">{randomfood.likes}</p></CardText>
+                      
                     </Card>
                 </div>
             )}
-            <Button className="btn-danger col-3" onClick={DeleteFood} navigate="/food/random">Destroy </Button>
+            <Button className="btn-danger col-3" onClick={handleClick2} navigate="/food/random">Destroy </Button>
             <Button className="btn-warning col-3" onClick={handleClick}> Like  </Button>
             <Button className="col-3"> Add to Cart</Button>
             {UpdateForm}
