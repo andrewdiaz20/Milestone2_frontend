@@ -49,8 +49,23 @@ function RandomFood() {
     }
 
     async function UpdateLike() {
-        console.log(randomfood._id)
+        console.log(randomfood)
         console.log('yes')
+        const newLikeCount = (randomfood.likes || 0) + 1;
+        const url = `${process.env.REACT_APP_BACKEND_URL}/foods/${randomfood._id}`
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify({likes: newLikeCount }),
+        });
+
+    }
+
+    async function handleClick() {
+        UpdateLike();
+        setTimeout(() => {
+            window.location.reload();
+        },1000)
     }
     
     return (
@@ -69,7 +84,7 @@ function RandomFood() {
                 </div>
             )}
             <Button className="btn-danger col-3" onClick={DeleteFood} navigate="/food/random">Destroy </Button>
-            <Button className="btn-warning col-3" onClick={UpdateLike}> Like  </Button>
+            <Button className="btn-warning col-3" onClick={handleClick}> Like  </Button>
             <Button className="col-3"> Add to Cart</Button>
             {UpdateForm}
         </div>
