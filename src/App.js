@@ -13,6 +13,7 @@ import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
 import Cart from './Components/Cart.js';
 
+import Banner from './Components/Banner.js';
 
 
 
@@ -41,9 +42,12 @@ function App() {
 
   return (
     <div className='main-footer'>
-      <div className='content-wrap'>
-        <Router>
-          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn} />
+
+          <div className='content-wrap'>
+         <Router>
+         <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
+        <Banner/>
+
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path={'foods/:id'} element={<Food />} />
