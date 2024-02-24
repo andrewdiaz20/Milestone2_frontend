@@ -51,8 +51,6 @@ function Grocery() {
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} placeholder="Search Food" />
                 <input type="submit" />
-                <input onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search Price" />
-                <input type="submit" />
             </form>
         </div>
         <div>
