@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import GroceryItem from "./GroceryItem";
 import { Link } from "react-router-dom";
 import { Foods } from "./Food.js"
+import { Image } from "react-bootstrap";
 
 
 function Grocery() {
@@ -57,7 +58,8 @@ function Grocery() {
             {searchResults.map(food => ( // Render the search results
                     <div className="form2"key={food._id}>
                         <Link to={`/foods/${food._id}`}>{food.name}</Link>
-                        {/* Other food details can be displayed here */}
+                        <div className="form2"key={Image._id}>
+                        </div>
                     </div>
                 ))}
             </div>
