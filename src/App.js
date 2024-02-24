@@ -10,7 +10,7 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
 import Footer from './Components/footer.js';
 import Cart from './Components/Cart.js';
-
+import Banner from './Components/Banner.js';
 
 
 
@@ -41,6 +41,7 @@ function App() {
     <div>
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
+        <Banner/>
           <Routes>
             <Route path ='/' element={<Home />}/>
             <Route path ={'foods/:id' }element={<Food />}/>

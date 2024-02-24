@@ -1,4 +1,4 @@
-nav{
+nav {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px 0  rgba(0,0,0,.2);
@@ -12,7 +12,7 @@ nav span:hover{
  color: greenyellow;
  cursor: pointer;
 }
-nav img {
+nav img{
     width: 100px;
     height: 100px;
 }
@@ -28,7 +28,7 @@ nav ul{
    background-color:palevioletred;
 
 }
-.secondRow {
+.secondRow{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@ nav ul{
 }
 nav .searchBar{
     display: flex;
-    box-shadow: 0 0 10px 0 (rgba(0,0,0,.3));
+    box-shadow: 0 0 10px 0 black;
     border-radius: 5px;
     
 }
@@ -66,4 +66,8 @@ text-align: center;
 }
 nav .home{
 display: flex;
+}
+ nav Link {
+    text-decoration: none;
+    color: inherit;
 }
