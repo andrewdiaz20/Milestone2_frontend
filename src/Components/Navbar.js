@@ -1,4 +1,4 @@
-import { React, useState,useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
@@ -11,19 +11,19 @@ function Navbar({ isLoggedIn, logout, reloadnavbar }) {
   const getcarttotalitems = () => {
     let cart = JSON.parse(localStorage.getItem('cart'))
     if (cart) {
-        let total = 0
-        cart.forEach(item => {
-            total += item.quantity
-        })
-        setcartquantity(total)
+      let total = 0
+      cart.forEach(item => {
+        total += item.quantity
+      })
+      setcartquantity(total)
     }
     else {
-        setcartquantity(0)
+      setcartquantity(0)
     }
-}
-useEffect(() => {
-  getcarttotalitems()
-}, [reloadnavbar])
+  }
+  useEffect(() => {
+    getcarttotalitems()
+  }, [reloadnavbar])
 
   const navigate = useNavigate();
 
@@ -60,12 +60,20 @@ useEffect(() => {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        food-page-food-img
-        <div>
-          <Link to="/food/review">Leave Us A Review</Link>
+        <div className="home">
+          HOME
+          <Link to="/">
+            <span class="material-symbols-outlined">home</span>
+          </Link>
+        </div>
+        <div className="grocery" >
+          <Link to="/grocery" className="Link">Grocery</Link>
         </div>
         <div>
-          <Link to="/food/random">Would you Eat This</Link>
+          <Link to="/food/review" className="Link">Leave Us A Review</Link>
+        </div>
+        <div>
+          <Link to="/food/random" className="Link">Would you Eat This</Link>
         </div>
         {/* search */}
         <div className="searchBar">
@@ -78,15 +86,8 @@ useEffect(() => {
           <button className="btnSearch">SEARCH</button>
         </div>
         {/* home */}
-        <div className="home">
-          HOME
-          <Link to="/">
-            <span class="material-symbols-outlined">home</span>
-          </Link>
-        </div>
-        <div className="grocery">
-          <Link to="/grocery">Grocery</Link>
-        </div>
+
+
         {/* login & sign up*/}
         <div className="right">
           {isLoggedIn ? (
@@ -132,5 +133,5 @@ useEffect(() => {
 
 
 export default Navbar;
-        
+
 

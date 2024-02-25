@@ -25,7 +25,12 @@ nav ul{
     
 }
 .firstRow{
-   background-color:palevioletred;
+   background-color:#F36991;
+   font-family: "Anton", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: white;
+   padding: 40px 100px 10px 100px;
 
 }
 .secondRow{
@@ -33,6 +38,15 @@ nav ul{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(69, 172, 236);
+    padding: 10px 100px 10px 100px;
+    margin: 50px 100px 10px 100px;
+    border: white 10px solid;
+    border-radius: 20px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  
 }
 nav .searchBar{
     display: flex;
@@ -70,4 +84,12 @@ display: flex;
  nav Link {
     text-decoration: none;
     color: inherit;
+}
+
+.Link{
+    color: white;
+    &:hover {
+        color:#F36991
+    }
+    
 }
