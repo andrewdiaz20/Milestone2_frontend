@@ -10,18 +10,11 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
 import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
-<<<<<<< HEAD
 import Cart from './Components/Cart.js';
 import "./CSS/Card.css"
 import Banner from './Components/Banner.js';
-=======
+import isLoggedIn from './Components/Login.js'
 
-// import footer from './Components/footer.js';
-// import Cart from './Components/Cart.js';
-// import RandomFood from './Components/RandomFood.js';
-
-
->>>>>>> 2f228dc7f1eb4bf09afb68c436539283672a1432
 
 
 
@@ -53,6 +46,7 @@ function App() {
 
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
+         
          <Routes>
             <Route path ='/' element={<Home />}/>
             <Route path ={'foods/:id' }element={<Food />}/>
