@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./Grocery.css";
+import "../CSS/Grocery.css";
 import { useNavigate } from "react-router-dom";
 import GroceryItem from "./GroceryItem";
 import { Link } from "react-router-dom";

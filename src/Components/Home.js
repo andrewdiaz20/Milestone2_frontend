@@ -20,19 +20,10 @@ function Home() {
     }, [])
 
 
-    const display = foods.map(food => {
-        return (
-            <div key={foods.id}>
-                <Link to={`/foods/${food._id}`}>{food.name}</Link>
-                <Link to={`/login`}>Login</Link>
-            </div>
-        )
-    })
+
     return (
         <div>
             <Banner />
-            {display}
-            <Link to={`/food/review`}>Review </Link>
         </div>
     )
 }

@@ -1,0 +1,37 @@
+.center-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F36991;
+    padding-top: 10px;
+}
+
+.center-form-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F36991;
+    padding-top: 10px;
+    font-size: 50px;
+}
+.center-form2{
+
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    margin-left: 30px;
+    display:block;
+    width: 20vw;
+    padding: 10px;
+    margin: 10px;
+    
+    
+    
+}

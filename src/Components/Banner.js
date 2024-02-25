@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slider'
 import {Link }from 'react-dom'
-import './Banner.css'
+import '../CSS/Banner.css'
 
 
 function Banner() {

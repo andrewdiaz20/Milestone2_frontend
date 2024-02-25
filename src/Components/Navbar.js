@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
-import "./Navbar.css";
+import "../CSS/Navbar.css";
 
 
 function Navbar({ isLoggedIn, logout, reloadnavbar }) {
@@ -73,7 +73,7 @@ function Navbar({ isLoggedIn, logout, reloadnavbar }) {
           <Link to="/food/review" className="Link">Leave Us A Review</Link>
         </div>
         <div>
-          <Link to="/food/random" className="Link">Would you Eat This</Link>
+          <Link to="/food/random" className="Link">Food Picker 3000</Link>
         </div>
         {/* search */}
         <div className="searchBar">
@@ -120,12 +120,6 @@ function Navbar({ isLoggedIn, logout, reloadnavbar }) {
             }
           </div>
         </div>
-      </div>
-
-      <div>
-        <Link to="/">Home</Link>
-
-        <Link to="/food/new">New</Link>
       </div>
     </nav>
   );

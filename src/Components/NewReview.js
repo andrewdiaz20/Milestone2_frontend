@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Card, CardBody, CardSubtitle, CardImg, CardTitle, Button, CardText } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/Card.css'
+import '../CSS/NewReview.css'
 
 
 
@@ -63,9 +64,9 @@ function NewReview() {
 
 
     return (
-        <div  >
-            <h3>Give us a Review</h3>
-            <form onSubmit={handleSubmit}  >
+        <div >
+            <h3 className="center-form-header">Leave us a Review</h3>
+            <form onSubmit={handleSubmit} className="center-form" >
                 <input className="form-2" onChange={handleChange} value={reviews.name} name="name" placeholder="name" />
                 <input className="form-1" onChange={handleChange} value={reviews.rating} name="rating" placeholder="rating" type="number" min={0} max={5} />
                 <input className="form-2" onChange={handleChange} value={reviews.comment} name="comment" placeholder="comment" type="textArea" />
@@ -75,13 +76,13 @@ function NewReview() {
             </form>
             <div >
                 {/* index was added cause for some reason it removed the id error on the console log  */}
-                <h3>Reviews</h3>
+                <h3 className="center-form">Reviews</h3>
                 {reviews.map((review, index) => (
                     <div key={index} className="card-div" >
                         <Card className="custom-card" >
-                            <CardTitle> <h4 className="card-headers">Name:</h4> <h5>{review.name} </h5></CardTitle>
+                            <CardTitle> <h4 className="card-headers">Name:</h4> <p className="card-text-size">{review.name} </p></CardTitle>
                             <CardText><h4 className="card-headers">Rating: </h4> <p className="card-text-size">{review.rating}</p></CardText>
-                            <h4 className="card-headers">Comment:</h4 > <p>{review.comment}</p>
+                            <h4 className="card-headers">Comment:</h4 > <p className="card-text-size">{review.comment}</p>
                         </Card>
 
                     </div>
