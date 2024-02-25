@@ -138,19 +138,19 @@ hr{
 }
 
 @media screen and (max-width: 992px) {
-  .footer-wrap {
+  .footer {
     height: 50px; /* adjust the height for smaller screens */
   }
 }
 
 @media screen and (max-width: 768px) {
-  .footer-wrap {
+  .footer {
     height: 40px; /* adjust the height for even smaller screens */
   }
 }
 
 @media screen and (max-width: 550px) {
-  .footer-wrap {
+  .footer {
     height: 30px; /* adjust the height for very small screens */
   }
 }
