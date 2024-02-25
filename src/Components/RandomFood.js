@@ -76,7 +76,7 @@ function RandomFood() {
     }
     
     return (
-        <div className="container text-center">
+        <div >
             <h3>Random Food Selector 3000</h3>
             {randomfood && ( // Check if a review is selected
                 <div className="card-div">

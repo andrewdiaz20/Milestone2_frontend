@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
 
-function Navbar({ isLoggedIn, logout }) {
+function Navbar({ isLoggedIn, logout, reloadnavbar }) {
   const [cartQuantity, setcartquantity] = useState(0);
 
   const getcarttotalitems = () => {
@@ -129,5 +129,3 @@ useEffect(() => {
 }
 
 export default Navbar;
-        
-

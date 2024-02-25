@@ -63,7 +63,7 @@ function NewReview() {
 
 
     return (
-        <div className="container text-center" >
+        <div  >
             <h3>Give us a Review</h3>
             <form onSubmit={handleSubmit}  >
                 <input className="form-2" onChange={handleChange} value={reviews.name} name="name" placeholder="name" />
@@ -73,7 +73,7 @@ function NewReview() {
                 <input className="form-1" Button="warning" type="submit" />
 
             </form>
-            <div className="container text-center">
+            <div >
                 {/* index was added cause for some reason it removed the id error on the console log  */}
                 <h3>Reviews</h3>
                 {reviews.map((review, index) => (
