@@ -10,9 +10,18 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
 import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
+<<<<<<< HEAD
 import Cart from './Components/Cart.js';
 import "./CSS/Card.css"
 import Banner from './Components/Banner.js';
+=======
+
+// import footer from './Components/footer.js';
+// import Cart from './Components/Cart.js';
+// import RandomFood from './Components/RandomFood.js';
+
+
+>>>>>>> 2f228dc7f1eb4bf09afb68c436539283672a1432
 
 
 
@@ -41,10 +50,10 @@ function App() {
   return (
     <div className='mainpage'>
 
-          <div  >
+
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
-          <Routes>
+         <Routes>
             <Route path ='/' element={<Home />}/>
             <Route path ={'foods/:id' }element={<Food />}/>
             <Route path ='/food/new' element={<NewFood/>}/>
