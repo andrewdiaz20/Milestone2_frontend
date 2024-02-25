@@ -1,7 +1,8 @@
 function Cart() {
     return(
         <div>
-            Cart Functionality in progress
+            Cart Funcitonality In progress
+
         </div>
     )
 }
