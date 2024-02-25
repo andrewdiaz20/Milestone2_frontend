@@ -1,15 +1,15 @@
 //useState: 
 //useEffect: when page loads we need to fetch food
-import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import Banner from './Banner'
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Banner from './Banner';
 
 function Home() {
     const [foods, setFoods] = useState([])
 
     useEffect(() => {
         async function fetchData() {
-            const url = `${process.env.REACT_APP_BACKEND_URL}/foods/all`
+            const url = `${process.env.REACT_APP_BACKEND_URL}/Food/all`
             const response = await fetch(url)
             const data = await response.json()
             console.log(data)

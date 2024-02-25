@@ -48,17 +48,17 @@ function Grocery() {
 
     return (
         <div>
-        <div className="form">
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} placeholder="Search Food" />
-                <input type="submit" />
-            </form>
-        </div>
-        <div>
-            {searchResults.map(food => ( // Render the search results
-                    <div className="form2"key={food._id}>
+            <div className="form">
+                <form onSubmit={handleSubmit}>
+                    <input onChange={handleChange} placeholder="Search Food" />
+                    <input type="submit" />
+                </form>
+            </div>
+            <div>
+                {searchResults.map(food => ( // Render the search results
+                    <div className="form2" key={food._id}>
                         <Link to={`/foods/${food._id}`}>{food.name}</Link>
-                        <div className="form2"key={Image._id}>
+                        <div className="form2" key={Image._id}>
                         </div>
                     </div>
                 ))}

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
 
-// function Navbar({ isLoggedIn, logout }) {
+// function Navbar({ isLoggedIn, logout })
 //   const [cartQuantity, setcartquantity] = useState(0);
 
 //   const getcarttotalitems = () => {
@@ -25,7 +25,7 @@ import "./Navbar.css";
 
 
 function Navbar() {
-  const[isLoggedIn, logout] = useState('');
+  const [isLoggedIn, logout] = useState('');
   const navigate = useNavigate();
   const logoutUser = () => {
     localStorage.removeItem("token");
