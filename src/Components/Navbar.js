@@ -3,25 +3,25 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
 
-function Navbar({ isLoggedIn, logout }) {
-  const [cartQuantity, setcartquantity] = useState(0);
+// function Navbar({ isLoggedIn, logout }) {
+//   const [cartQuantity, setcartquantity] = useState(0);
 
-  const getcarttotalitems = () => {
-    let cart = JSON.parse(localStorage.getItem('cart'))
-    if (cart) {
-        let total = 0
-        cart.forEach(item => {
-            total += item.quantity
-        })
-        setcartquantity(total)
-    }
-    else {
-        setcartquantity(0)
-    }
-}
-useEffect(() => {
-  getcarttotalitems()
-}, [reloadnavbar])
+//   const getcarttotalitems = () => {
+//     let cart = JSON.parse(localStorage.getItem('cart'))
+//     if (cart) {
+//         let total = 0
+//         cart.forEach(item => {
+//             total += item.quantity
+//         })
+//         setcartquantity(total)
+//     }
+//     else {
+//         setcartquantity(0)
+//     }
+// }
+// useEffect(() => {
+//   getcarttotalitems()
+// }, [reloadnavbar])
 
   const navigate = useNavigate();
 
@@ -128,6 +128,6 @@ useEffect(() => {
   );
 }
 
-export default Navbar;
+// export default Navbar;
         
 

@@ -5,17 +5,15 @@ import Food from './Components/Food';
 import NewFood from './Components/NewFood';
 import Home from './Components/Home';
 import NewReview from './Components/NewReview';
-import Grocery from './Components/Grocery';
+import Grocery from './Components/Grocery.jsx';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
 import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
-
-// import footer from './Components/footer.js';
-// import Cart from './Components/Cart.js';
-// import RandomFood from './Components/RandomFood.js';
-
-
+import Cart from './Components/Cart.js';
+import "./CSS/Card.css"
+import Banner from './Components/Banner.js';
+import isLoggedIn from './Components/Login.js'
 
 
 
@@ -43,10 +41,13 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='mainpage'>
+
+
          <Router>
          <Navbar isLoggedIn={isLoggedIn} logout={logout} key={isLoggedIn}/>
-          <Routes>
+         
+         <Routes>
             <Route path ='/' element={<Home />}/>
             <Route path ={'foods/:id' }element={<Food />}/>
             <Route path ='/food/new' element={<NewFood/>}/>
