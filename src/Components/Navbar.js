@@ -1,4 +1,4 @@
-import { React, useState,useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../image/Foddie Central.png";
 import "./Navbar.css";
@@ -23,17 +23,17 @@ import "./Navbar.css";
 //   getcarttotalitems()
 // }, [reloadnavbar])
 
-  const navigate = useNavigate();
+const navigate = useNavigate();
 
-  const logoutUser = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("loggedin");
+const logoutUser = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("loggedin");
 
-    //from app props
+  //from app props
 
-    logout();
-    navigate("/login");
-  };
+  logout();
+  navigate("/login");
+
 
   return (
     <nav>
@@ -126,8 +126,8 @@ import "./Navbar.css";
       </div>
     </nav>
   );
-}
+};
 
-// export default Navbar;
-        
+export default Navbar;
+
 
