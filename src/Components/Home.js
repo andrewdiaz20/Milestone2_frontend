@@ -5,36 +5,36 @@ import { Link } from "react-router-dom"
 import Banner from './Banner'
 
 function Home() {
-   const [foods, setFoods] = useState([])
+    const [foods, setFoods] = useState([])
 
-   useEffect(() => {
-    async function fetchData() {
-        const url = `${process.env.REACT_APP_BACKEND_URL}/foods/all`
-        const response = await fetch(url)
-        const data  = await response.json()
-        console.log(data)
-        console.log('yes')
-        setFoods(data)
-    }
-    fetchData()
-   },[])
+    useEffect(() => {
+        async function fetchData() {
+            const url = `${process.env.REACT_APP_BACKEND_URL}/foods/all`
+            const response = await fetch(url)
+            const data = await response.json()
+            console.log(data)
+            console.log('yes')
+            setFoods(data)
+        }
+        fetchData()
+    }, [])
 
 
-   const display = foods.map(food => {
+    const display = foods.map(food => {
+        return (
+            <div key={foods.id}>
+                <Link to={`/foods/${food._id}`}>{food.name}</Link>
+                <Link to={`/login`}>Login</Link>
+            </div>
+        )
+    })
     return (
-        <div key={foods.id}>
-            <Link to={`/foods/${food._id}`}>{food.name}</Link>
-            <Link to={`/login`}>Login</Link>
+        <div>
+            <Banner />
+            {display}
+            <Link to={`/food/review`}>Review </Link>
         </div>
     )
-   })
-   return (
-    <div>
-        <Banner/>
-        {display}
-           <Link to={`/food/review`}>Review </Link>
-    </div>
-   )
 }
 
-export default Home
+export default Home;
