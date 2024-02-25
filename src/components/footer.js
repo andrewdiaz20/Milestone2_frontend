@@ -40,7 +40,7 @@ const Footer = () => {
               </div>
             </div>
             {/* Column 3 */}
-            <div className="sb_footer-link-div" style={{ marginTop: '20px' }}>
+            <div className="sb_footer-link-div">
               <h4>Contact Us</h4>
               <a href="#">
                 <i className="bi bi-geo-alt-fill">Las Vegas,Nevada</i>
@@ -56,8 +56,8 @@ const Footer = () => {
               <br></br>
               <Iframe
                 className="footer-map"
-                width="100px"
-                height="300px"
+                width="50px"
+                height="25px"
                 frameborder="0"
                 style="border:0"
                 referrerpolicy="no-referrer-when-downgrade"
