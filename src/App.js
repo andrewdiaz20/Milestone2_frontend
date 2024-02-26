@@ -10,7 +10,7 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp.js';
 import RandomFood from './Components/RandomFood.js';
 import UpdateForm from './Components/UpdateForm.js';
-import Footer from './Components/Footer.jsooter.js';
+import Footer from './Components/Footer.js';
 import Cart from './Components/Newshoppingcart.js';
 import "./CSS/Card.css";
 // import 
