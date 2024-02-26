@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import "../CSS/Grocery.css";
 import { useNavigate } from "react-router-dom";
-import GroceryItem from "./GroceryItem";
 import { Link } from "react-router-dom";
-import { Foods } from "./Food.js"
-import { Image } from "react-bootstrap";
+import { Foods } from "./Food.js";
+import image10002 from '../image/10002.webp';
+import image10004 from '../image/10004.webp';
+
+
+
 
 
 function Grocery() {
@@ -46,6 +49,7 @@ function Grocery() {
 
 
 
+
     return (
         <div>
             <div className="form">
@@ -57,9 +61,8 @@ function Grocery() {
             <div>
                 {searchResults.map(food => ( // Render the search results
                     <div className="form2" key={food._id}>
+                        <img  src={food.profilePicture} className="card-img" />
                         <Link to={`/foods/${food._id}`}>{food.name}</Link>
-                        <div className="form2" key={Image._id}>
-                        </div>
                     </div>
                 ))}
             </div>
