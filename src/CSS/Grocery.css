@@ -1,52 +1,57 @@
 .form2{
-    border-radius: 5px solid white;
+    border-radius: 10px solid red;
     margin: auto;
-    color: white;
+    color: #F36991;
     margin-top: 10em;
     display: flex;
     flex-direction: row;
-    background: hsl(195, 93%, 60%);
-    color: black;
-    background-color: #45CFFF;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    background:  rgb(69, 172, 236);
+    background-color:  rgb(69, 172, 236);
+    padding-top: 1em;
+    padding-bottom: 1em;
     width: 100vh;
-    outline: white;
     align-items: center;
     text-decoration: none;
-    
-
+    font-family: "Anton", sans-serif;
+    padding-right: 25em;
     
 }
 .form{
-    border-radius: 5px solid white;
+    border-radius: 10px solid red;
     margin: auto;
-    color: white;
+    color: #F36991;
     margin-top: 10em;
     display: flex;
     flex-direction: row;
-    background: #3ac9f8;
-    color: white;
-    background-color: #45CFFF;
+    background:  rgb(69, 172, 236);
+    background-color: rgb(69, 172, 236);
     padding-top: 2em;
     padding-bottom: 2em;
     width: 100vh;
-    outline: white;
+    color: #F36991;
     align-items: center;
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+
 
     
 }
 .form-submit-button{
-    color: white;
-    background-color: #45CFFF;
+    color: #F36991;
+    background-color: rgb(69, 172, 236);
     border: 5px white;
     outline: white;
 }
 input{
-    background-color: #45CFFF;
-    color: white;
+    background-color: rgb(69, 172, 236);
+    color:white;
     border: 5px white;
 }
-a{
+a:link{
     text-decoration: none;
+    color: white;
+    &:hover {
+        color:#F36991
+    }
+    font-family: "Anton", sans-serif;
 }
