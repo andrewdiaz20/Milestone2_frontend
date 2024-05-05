@@ -10,7 +10,18 @@ FoodPicker3000 page: randomly selects a food item from our database and allows u
 Login page: users are able to login if account has been created
 Signin page: users are able to create an account and the data is saved in our data bases 
 
+##Technologies
+Front End:
+- React
+- -react router dom
+- -typescript
+- bootstrap
 
+Back End: 
+- express
+- mongoose
+- dotenv
+- bcrypt
 
 ### Upcoming Features
 Recipe Creator : allows users to input any ingredient and create a dish based on ingredients and criteria chossen by the user.
@@ -18,3 +29,6 @@ Per Item Review: users will be able to review individual food items
 FoodPicker3000 leaderboard: a page where it will show the highest liked food regardless of it being destroyed . 
 Review page user delete: users will be able to delete their own created reviews 
 
+#issues 
+Currently not deployed 
+Comments are not paired to user 
