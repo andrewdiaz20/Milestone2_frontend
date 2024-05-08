@@ -1,0 +1,163 @@
+$base-color: #c6538c;
+
+$border-dark: rgba($base-color, 0.88);
+
+.alert {
+    border: 1px solid $border-dark;
+}
+
+@debug 10s + 15s;
+@debug 1in - 10px; 
+@debug 5px * 3px; 
+@debug 1in % 9px; 
+
+$black: #000 !default;
+$border-radius: 0.25rem !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+
+code {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+.parent {
+    .child {
+      color: red;
+    }
+}
+
+.some-class {
+    &.another-class {
+      color: green($color: #000000);
+    }
+}
+
+%block {
+    .title {
+      font-size: 12px;
+    }
+  }
+  
+  .superblock {
+    @extend %block;
+    .title {
+      font-weight: bold;
+    }
+}
+  
+
+.superblock .title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+    li {
+        display: inline-block;
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+    [dir=rtl] & {
+        #{$property}: $rtl-value;
+    }
+}
+
+
+@mixin replace-text($image, $x: 50%, $y: 50%) {
+    text-indent: -99999em;
+    overflow: hidden;
+    text-align: left;
+    background: {
+        image: $image;
+        repeat: no-repeat;
+        position: $x $y;
+    }
+}
+
+@function fibonacci($n) {
+    $sequence: 0 1;
+    @for $_ from 1 through $n {
+        $new: nth($sequence, length($sequence)) + nth($sequence, length($sequence) - 1);
+        $sequence: append($sequence, $new);
+    }
+    @return nth($sequence, length($sequence));
+}
+
+.sidebar {
+    float: left;
+    margin-left: fibonacci(4) * 1px;
+}
+
+$primary-color: #036;
+
+.header {
+    background-color: invert($primary-color, 80%);
+}
+
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+
+@function remove-where($list, $condition) {
+    $new-list: ();
+    $separator: list.separator($list);
+    @each $element in $list {
+        @if not meta.call($condition, $element) {
+            $new-list: list.append($new-list, $element, $separator: $separator);
+        }
+    }
+    @return $new-list;
+}
+
+$fonts: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.content {
+    @function contains-helvetica($string) {
+        @return string.index($string, "Helvetica");
+    }
+
+    font-family: remove-where($fonts, meta.get-function("contains-helvetica"));
+}
+
+@if $theme == 'dark' {
+    background-color: #333;
+    color: #fff;
+  } @else {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+$colors: red, green, blue;
+@each $color in $colors {
+  .color-#{$color} {
+    background-color: $color;
+  }
+}
+
+@for $i from 1 through 5 {
+    .column-#{$i} {
+      width: 20% * $i;
+    }
+}
+
+$font-size: 12px;
+@while $font-size < 24px {
+  .text-#{$font-size} {
+    font-size: $font-size;
+  }
+  $font-size: $font-size + 2px;
+}
